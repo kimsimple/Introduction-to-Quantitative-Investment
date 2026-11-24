@@ -1,0 +1,1351 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.11.1">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>第3章 择时 第1节 量化择时概述 – 量化投资导论</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./第3章 择时 第2节 技术指标和技术分析.html" rel="next">
+<link href="./第2章 因子选股 第12节 逆向“排雷”.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-d5b4e69c7e37b49c6591bcc5116dd748.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-816dd27da671f9fba5c49f66be31298f.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+</head>
+
+<body class="nav-sidebar floating quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./第3章 择时 第1节 量化择时概述.html">第3章 择时 第1节 量化择时概述</a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">量化投资导论</a> 
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">《量化投资导论》</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./第0章 前言1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">前言</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./第0章 前言2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">前言2</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./第1章 基础知识 第1节 概述.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">第1章 基础知识 第1节 概述</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./第1章 基础知识 第2节 理论模型.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">第1章 基础知识 第2节 理论模型</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./第1章 基础知识 第3节 两个范式.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">第1章 基础知识 第3节 两个范式</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./第1章 基础知识 第4节 策略研发.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">第1章 基础知识 第4节 策略研发</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./第1章 基础知识 第5节 数据.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">第1章 基础知识 第5节 数据</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./第1章 基础知识 第6节 统计方法和模型.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">第1章 基础知识 第6节 统计方法和模型</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./第1章 基础知识 第7节 模型的选择.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">第1章 基础知识 第7节 模型的选择</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./第1章 基础知识 第8节 风险.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">第1章 基础知识 第8节 风险</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./第1章 基础知识 第9节 编程语言.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">第1章 基础知识 第9节 编程语言</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./第2章 因子选股 第1节 股票多因子模型一般流程.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">第2章 因子选股 第1节 股票多因子模型一般流程</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./第2章 因子选股 第2节 量价因子.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">第2章 因子选股 第2节 量价因子</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./第2章 因子选股 第3节 基本面因子.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">第2章 因子选股 第3节 基本面因子</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./第2章 因子选股 第4节 高频数据低频化因子.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">第2章 因子选股 第4节 高频数据低频化因子</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./第2章 因子选股 第5节 其它因子.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">第2章 因子选股 第5节 其它因子</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./第2章 因子选股 第6节 数据处理.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">第2章 因子选股 第6节 数据处理</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./第2章 因子选股 第7节 基于理论和经验的因子合成.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">第2章 因子选股 第7节 基于理论和经验的因子合成</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./第2章 因子选股 第8节 基于数据和模型的因子合成.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">第2章 因子选股 第8节 基于数据和模型的因子合成</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./第2章 因子选股 第9节 因子正交和因子筛选.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">第2章 因子选股 第9节 因子正交和因子筛选</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./第2章 因子选股 第10节 风险管理和组合优化.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">第2章 因子选股 第10节 风险管理和组合优化</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./第2章 因子选股 第11节 银行、券商、保险.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">第2章 因子选股 第11节 银行、券商、保险</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./第2章 因子选股 第12节 逆向“排雷”.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">第2章 因子选股 第12节 逆向“排雷”</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./第3章 择时 第1节 量化择时概述.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">第3章 择时 第1节 量化择时概述</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./第3章 择时 第2节 技术指标和技术分析.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">第3章 择时 第2节 技术指标和技术分析</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./第3章 择时 第3节 宏观经济.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">第3章 择时 第3节 宏观经济</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./第3章 择时 第4节 投资者情绪.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">第3章 择时 第4节 投资者情绪</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./第3章 择时 第5节 期权和期货指标.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">第3章 择时 第5节 期权和期货指标</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./第3章 择时 第6节 左侧择时.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">第3章 择时 第6节 左侧择时</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./第3章 择时 第7节 周期效应和日历效应.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">第3章 择时 第7节 周期效应和日历效应</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./第3章 择时 第8节 多因子择时模型.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">第3章 择时 第8节 多因子择时模型</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./第3章 择时 第9节 风格择时（1）.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">第3章 择时 第9节 风格择时（1）</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./第3章 择时 第10节 风格择时（2）.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">第3章 择时 第10节 风格择时（2）</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./第4章 行业轮动 第1节 概述.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">第4章 行业轮动 第1节 概述</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./第4章 行业轮动 第2节 行业择时.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">第4章 行业轮动 第2节 行业择时</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./第4章 行业轮动 第3节 宏观模型.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">第4章 行业轮动 第3节 宏观模型</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./第4章 行业轮动 第4节 行业多因子模型（1）.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">第4章 行业轮动 第4节 行业多因子模型（1）</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./第4章 行业轮动 第5节 行业多因子模型（2）.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">第4章 行业轮动 第5节 行业多因子模型（2）</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./第6章 商品CTA 第1节 商品期货市场概况.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">第6章 商品CTA 第1节 商品期货市场概况</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./第6章 商品CTA 第2节 商品期货的数据处理.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">第6章 商品CTA 第2节 商品期货的数据处理</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./第6章 商品CTA 第3节 海龟策略.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">第6章 商品CTA 第3节 海龟策略</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./第6章 商品CTA 第4节 基本面量化和择时.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">第6章 商品CTA 第4节 基本面量化和择时</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./第6章 商品CTA 第5节 套利策略.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">第6章 商品CTA 第5节 套利策略</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./第6章 商品CTA 第6节 商品多因子模型.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">第6章 商品CTA 第6节 商品多因子模型</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./第7章 资产配置 第1节 概述.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">第7章 资产配置 第1节 概述</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./第7章 资产配置 第2节 美林时钟.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">第7章 资产配置 第2节 美林时钟</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./第7章 资产配置 第3节 普林格六周期.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">第7章 资产配置 第3节 普林格六周期</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./第7章 资产配置 第4节 Black-Litterman 模型.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">第7章 资产配置 第4节 Black-Litterman 模型</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./第7章 资产配置 第5节 全天候策略和风险平价模型.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">第7章 资产配置 第5节 全天候策略和风险平价模型</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./第7章 资产配置 第6节 全天候策略和风险平价模型的改进.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">第7章 资产配置 第6节 全天候策略和风险平价模型的改进</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./第7章 资产配置 第7节 宏观因子模型.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">第7章 资产配置 第7节 宏观因子模型</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./第9章 风险控制 第1节 历史重大风险危机回顾.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">第9章 风险控制 第1节 历史重大风险危机回顾</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./第9章 风险控制 第2节 多因子风险模型的构建.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">第9章 风险控制 第2节 多因子风险模型的构建</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./第9章 风险控制 第3节 多因子风险模型的因子体系.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">第9章 风险控制 第3节 多因子风险模型的因子体系</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./第9章 风险控制 第4节 多因子风险模型的应用.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">第9章 风险控制 第4节 多因子风险模型的应用</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./第9章 风险控制 第5节 风险模型的局限性及其应对.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">第9章 风险控制 第5节 风险模型的局限性及其应对</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./第10章 投资系统和投资工程 第1节 投资的“工程化”.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">第10章 投资系统和投资工程 第1节 投资的“工程化”</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./第10章 投资系统和投资工程 第2节 系统化的指数增强.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">第10章 投资系统和投资工程 第2节 系统化的指数增强</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./第10章 投资系统和投资工程 第3节 系统化的绝对收益.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">第10章 投资系统和投资工程 第3节 系统化的绝对收益</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./第11章 宏观经济 第1节 宏观研究框架.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">第11章 宏观经济 第1节 宏观研究框架</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./第11章 宏观经济 第2节 全球四大央行货币政策框架.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">第11章 宏观经济 第2节 全球四大央行货币政策框架</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./第11章 宏观经济 第3节 景气指数.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">第11章 宏观经济 第3节 景气指数</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./第11章 宏观经济 第4节 Nowcasting.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">第11章 宏观经济 第4节 Nowcasting</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./第11章 宏观经济 第5节 周期理论.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">第11章 宏观经济 第5节 周期理论</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./第11章 宏观经济 第6节 宏观预期差.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">第11章 宏观经济 第6节 宏观预期差</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./第12章 全球资本市场 第1节 股票市场.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">第12章 全球资本市场 第1节 股票市场</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./第12章 全球资本市场 第3节 商品期货市场.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">第12章 全球资本市场 第3节 商品期货市场</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./第12章 全球资本市场 第4节 外汇市场.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">第12章 全球资本市场 第4节 外汇市场</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./第12章 全球资本市场 第5节 金融衍生品市场.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">第12章 全球资本市场 第5节 金融衍生品市场</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./第13章 数据资源 第1节 行情数据.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">第13章 数据资源 第1节 行情数据</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./第13章 数据资源 第2节 FRED 数据库.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">第13章 数据资源 第2节 FRED</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./第13章 数据资源 第3节 EDGAR 系统.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">第13章 数据资源 第3节 EDGAR 系统</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./第13章 数据资源 第4节 巨潮资讯.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">第13章 数据资源 第4节 巨潮资讯</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./第13章 数据资源 第5节 国内官方数据资源.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">第13章 数据资源 第5节 国内官方数据资源</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./第13章 数据资源 第6节 商品期货数据.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">第13章 数据资源 第6节 商品期货数据</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./第13章 数据资源 第7节 国际官方数据资源.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">第13章 数据资源 第7节 国际官方数据资源</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./第13章 数据资源 第8节 财经网站.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">第13章 数据资源 第8节 财经网站</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./第16章 R 第1节 R语言入门.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">第16章 R 第1节 R语言入门</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./第16章 R 第2节 数据处理.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">第16章 R 第2节 数据处理</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./第16章 R 第3节 一般统计分析.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">第16章 R 第3节 一般统计分析</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./第16章 R 第4节 时间序列分析.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">第16章 R 第4节 时间序列分析</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./第16章 R 第5节 金融计算.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">第16章 R 第5节 金融计算</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./第16章 R 第6节 线性模型.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">第16章 R 第6节 线性模型</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./第16章 R 第7节 机器学习.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">第16章 R 第7节 机器学习</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./第16章 R 第8节 torch for R.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">第16章 R 第8节 torch for R</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./第16章 R 第9节 其它计量分析工具包.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">第16章 R 第9节 其它计量分析工具包</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./第16章 R 第10节 优化算法.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">第16章 R 第10节 优化算法</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./第16章 R 第11节 提升计算效率 .html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">第16章 R 第11节 提升计算效率</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./第16章 R 第12节 数据读写和存储.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">第16章 R 第12节 数据读写和存储</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./第16章 R 第13节 网络爬虫.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">第16章 R 第13节 网络爬虫</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./第16章 R 第14节 与大模型交互.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">第16章 R 第14节 与大模型交互</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./第16章 R 第15节 R与Python交互.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">第16章 R 第15节 R与Python交互</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./第16章 R 第16节 其它常用工具包.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">第16章 R 第16节 其它常用工具包</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./第16章 R 第17节 其它重要问题.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">第16章 R 第17节 其它重要问题</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./第21章 参考书籍和文献 第1节 参考书籍.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">第21章 参考书籍和文献 第1节 参考书籍</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#引言" id="toc-引言" class="nav-link active" data-scroll-target="#引言">引言</a></li>
+  <li><a href="#一20日均线择时策略" id="toc-一20日均线择时策略" class="nav-link" data-scroll-target="#一20日均线择时策略">一、20日均线择时策略</a>
+  <ul class="collapse">
+  <li><a href="#日均线" id="toc-日均线" class="nav-link" data-scroll-target="#日均线">1.20日均线</a></li>
+  <li><a href="#策略规则" id="toc-策略规则" class="nav-link" data-scroll-target="#策略规则">2.策略规则</a></li>
+  <li><a href="#策略逻辑和投资哲学" id="toc-策略逻辑和投资哲学" class="nav-link" data-scroll-target="#策略逻辑和投资哲学">3.策略逻辑和投资哲学</a></li>
+  <li><a href="#策略优势和局限性" id="toc-策略优势和局限性" class="nav-link" data-scroll-target="#策略优势和局限性">4.策略优势和局限性</a></li>
+  </ul></li>
+  <li><a href="#二量化择时策略的生产流程" id="toc-二量化择时策略的生产流程" class="nav-link" data-scroll-target="#二量化择时策略的生产流程">二、量化择时策略的生产流程</a>
+  <ul class="collapse">
+  <li><a href="#第一阶段策略思想的来源" id="toc-第一阶段策略思想的来源" class="nav-link" data-scroll-target="#第一阶段策略思想的来源">1.第一阶段：策略思想的来源</a></li>
+  <li><a href="#第二阶段策略的量化建模与代码实现" id="toc-第二阶段策略的量化建模与代码实现" class="nav-link" data-scroll-target="#第二阶段策略的量化建模与代码实现">2.第二阶段：策略的量化建模与代码实现</a></li>
+  <li><a href="#第三阶段策略回测" id="toc-第三阶段策略回测" class="nav-link" data-scroll-target="#第三阶段策略回测">3.第三阶段：策略回测</a></li>
+  <li><a href="#第四阶段参数优化" id="toc-第四阶段参数优化" class="nav-link" data-scroll-target="#第四阶段参数优化">4.第四阶段：参数优化</a></li>
+  </ul></li>
+  <li><a href="#三策略性能评估指标" id="toc-三策略性能评估指标" class="nav-link" data-scroll-target="#三策略性能评估指标">三、策略性能评估指标</a>
+  <ul class="collapse">
+  <li><a href="#收益类指标return-metrics" id="toc-收益类指标return-metrics" class="nav-link" data-scroll-target="#收益类指标return-metrics">1.收益类指标（Return Metrics）</a></li>
+  <li><a href="#风险类指标risk-metrics" id="toc-风险类指标risk-metrics" class="nav-link" data-scroll-target="#风险类指标risk-metrics">2.风险类指标（Risk Metrics）</a></li>
+  <li><a href="#风险调整后收益指标risk-adjusted-return-metrics" id="toc-风险调整后收益指标risk-adjusted-return-metrics" class="nav-link" data-scroll-target="#风险调整后收益指标risk-adjusted-return-metrics">3.风险调整后收益指标（Risk-Adjusted Return Metrics）</a></li>
+  <li><a href="#交易行为指标" id="toc-交易行为指标" class="nav-link" data-scroll-target="#交易行为指标">4.交易行为指标</a></li>
+  </ul></li>
+  <li><a href="#四总结与展望" id="toc-四总结与展望" class="nav-link" data-scroll-target="#四总结与展望">四、总结与展望</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">第3章 择时 第1节 量化择时概述</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="引言" class="level2">
+<h2 class="anchored" data-anchor-id="引言">引言</h2>
+<p>前面章节中，我曾重点介绍了，量化投资的<strong>两大核心范式</strong>。</p>
+<ul>
+<li><p><strong>截面范式</strong>的核心思想是，在某一个特定时间点，不同资产之间的收益率差异，可以由这些资产在各类因子上的暴露差异来解释。其分析的基本单位是“一个时间截面上所有股票的数据”。这种范式关注的是“今天，为什么这只股票比那只股票涨得更多？”。</p></li>
+<li><p><strong>时间序列范式的</strong>核心思想是，任何单一资产的收益率随时间的变化，可以由一组共同的风险因子在同一时期的收益率变化来解释。其分析的基本单位是“一只股票的时间序列数据”。这种范式关注的问题是“是什么驱动了这只股票在过去一段时间的回报？”。</p></li>
+</ul>
+<p>两个范式在股票投资的领域的具象化，可简单概括为股票的“选股”和“择时”两个核心命题。其中，“选股”回答的是“买什么”的问题，而“择时”则聚焦于“何时买卖”。前面章节，我们详细讨论了“选股”。本章我们将重点讨论“择时”。</p>
+<p><strong>量化择时</strong>，是通过构建数学模型，利用历史数据分析市场的内在规律，从而生成明确的、系统化的交易信号，以指导投资组合的仓位调整。其根本目标是识别市场状态，即是上涨的牛市，还是下跌的熊市，并据此调整风险敞口，力求在上涨趋势中获取收益，在下跌趋势中规避风险。</p>
+<p>在众多量化择时模型中，基于技术指标的策略因其直观性和易于实现的特点，成为了许多量化投资者的入门首选。其中，移动平均线（Moving Average, MA）策略，尤其是20日均线策略，堪称经典中的经典。它不仅是无数技术分析教科书的开篇章节，也是许多复杂量化策略的雏形。</p>
+</section>
+<section id="一20日均线择时策略" class="level2">
+<h2 class="anchored" data-anchor-id="一20日均线择时策略">一、20日均线择时策略</h2>
+<p>为了具象化地理解择时策略，我们首先需要定义一个清晰、可执行的策略范例。我们将构建一个标准化的“价格穿越20日均线”策略。</p>
+<section id="日均线" class="level3">
+<h3 class="anchored" data-anchor-id="日均线">1.20日均线</h3>
+<p>20日移动平均线（20日均线，MA20），通常被称为“月线”，因为它大致对应一个交易月的交易日数。其计算方法非常简单：将过去20个交易日的收盘价相加，再除以20，得到一个算术平均值。这个值每天都会随着新交易日的收盘价加入和最远的一个交易日收盘价的剔除而动态变化，从而形成一条平滑的曲线。</p>
+<p>在技术分析领域，MA20被广泛用于判断市场的中期趋势。其核心逻辑在于，均线代表了过去一段时间内市场的平均持仓成本。当价格运行在MA20之上时，意味着当前市场价格高于近一个月的平均成本，市场情绪偏向乐观，可能处于上升趋势中。当价格运行在MA20之下时，则表明当前市场价格低于近一个月的平均成本，市场情绪偏向悲观，可能处于下降趋势中。</p>
+</section>
+<section id="策略规则" class="level3">
+<h3 class="anchored" data-anchor-id="策略规则">2.策略规则</h3>
+<p>一个可执行的量化策略必须拥有精确无歧义的交易规则。我们将利用MA20，构建一个包含入场、出场、仓位管理和止损的完整规则体系。</p>
+<ul>
+<li><p><strong>买入（做多）信号：</strong> 触发条件：当日收盘价从下向上穿越20日均线。 量化描述：</p>
+<p><code>Close[t]&gt;MA20[t]</code>且<code>Close[t-1]&lt;=MA20[t-1]</code>。</p></li>
+<li><p><strong>卖出（做空）信号：</strong> 触发条件：当日收盘价从上向下穿越20日均线。 量化描述：</p>
+<p><code>Close[t]&lt;MA20[t]</code>且<code>Close[t-1]&gt;=MA20[t-1]</code>。</p></li>
+<li><p><strong>仓位管理规则：</strong> 采用“全仓进出”模式。即一旦买入信号触发，则投入全部指定资金（100%仓位）；一旦卖出信号触发，则全部清仓，持有现金。这种全仓或空仓的二元化的仓位管理方式，是均线这类趋势跟踪策略的典型特征。</p></li>
+<li><p><strong>风险管理规则：</strong> 也就是止损规则。一个常见的规则是：在买入后，若价格跌破某一阈值，则无条件卖出。例如，可以设置“当收盘价低于买入时支撑其的20日均线3%时，立即止损”。</p>
+<p>量化描述：若持有仓位，且<code>Close[t]&lt;MA20[t]*(1-3%)</code>，则执行卖出操作。这个规则可以防止在价格急跌时，等待价格正式下穿均线而导致更大的损失。</p></li>
+<li><p><strong>辅助过滤条件：</strong>为了提高信号的有效性，可以增加一个过滤条件：在触发买入信号时，20日均线本身必须处于走平或向上倾斜的状态。这有助于过滤掉在下跌趋势中的短暂反弹所产生的假信号。</p></li>
+</ul>
+</section>
+<section id="策略逻辑和投资哲学" class="level3">
+<h3 class="anchored" data-anchor-id="策略逻辑和投资哲学">3.策略逻辑和投资哲学</h3>
+<p>这个简单的策略背后蕴含着一种经典的投资哲学：<strong>趋势跟踪</strong>。</p>
+<ul>
+<li><p>假设：市场价格的运动在一定时间内会延续其既有方向，即“趋势一旦形成，便会持续”。</p></li>
+<li><p>目标：该策略不试图预测市场的顶部和底部，因为它是在趋势已经发生反转之后才发出信号，这天然带有滞后性。它的目标是捕捉并跟随一段已经形成的中期趋势。</p></li>
+<li><p>放弃：它放弃了在震荡市中通过高抛低吸获利的可能性。事实上，在没有明显趋势的横盘震荡市场中，价格会频繁地上下穿越均线，导致策略发出大量错误的买卖信号，从而反复“左右挨打”，产生连续的小额亏损。</p></li>
+</ul>
+</section>
+<section id="策略优势和局限性" class="level3">
+<h3 class="anchored" data-anchor-id="策略优势和局限性">4.策略优势和局限性</h3>
+<p><strong>优势：</strong></p>
+<ul>
+<li><p>简单直观：规则清晰，易于理解和执行，是量化入门的绝佳教材。</p></li>
+<li><p>客观性强：所有买卖决策均基于价格和均线的客观数据，排除了人的情绪、恐惧和贪婪的干扰，实现了纪律性交易。</p></li>
+<li><p>顺势而为：在单边上涨或单边下跌的大趋势行情中，该策略能有效地抓住大部分涨幅或规避大部分跌幅，表现良好。</p></li>
+</ul>
+<p><strong>局限性：</strong></p>
+<ul>
+<li><p>滞后性：均线是对过去价格的平均，因此其反应总是慢于价格变化。这导致买点通常不是最低点，卖点也不是最高点。</p></li>
+<li><p>震荡市表现不佳：这是该策略最致命的弱点。在市场缺乏明确方向、反复拉锯的行情中，频繁的无效交易信号会导致持续的亏损，严重侵蚀策略在趋势行情中积累的利润。</p></li>
+<li><p>参数敏感性：为什么是20日？而不是18日或22日？周期的选择对策略表现有显著影响。一个在历史数据上表现最优的参数，在未来可能失效。这引出了参数优化和过拟合的问题。</p></li>
+<li><p>信号的二元性：策略的输出通常是“全仓”或“空仓”，缺乏对市场状态更精细的刻画和更灵活的仓位调整能力。</p></li>
+</ul>
+<p>通过对这个具体策略的解构，我们已经触及了量化择时策略设计中的多个核心要素：清晰的规则、风险控制、内在逻辑以及固有的优缺点。接下来，我们将以此为基础，深入探讨量化择时策略的通用开发流程和评估体系。</p>
+</section>
+</section>
+<section id="二量化择时策略的生产流程" class="level2">
+<h2 class="anchored" data-anchor-id="二量化择时策略的生产流程">二、量化择时策略的生产流程</h2>
+<p>一个成熟的量化择时策略，其诞生过程远不止定义几条交易规则那么简单。它遵循着一套类似软件工程的严谨开发流程，涵盖了从想法萌芽到最终上线交易的每一个环节。</p>
+<section id="第一阶段策略思想的来源" class="level3">
+<h3 class="anchored" data-anchor-id="第一阶段策略思想的来源">1.第一阶段：策略思想的来源</h3>
+<p>量化策略的起点是一个具有潜在盈利能力的想法。这些想法的来源多种多样：</p>
+<ul>
+<li><p>经典技术分析理论：如我们示例中的均线系统，以及MACD、RSI、布林带等指标的组合应用。</p></li>
+<li><p>宏观经济数据：构建基于利率、通胀、PMI等宏观因子的择时模型。</p></li>
+<li><p>市场情绪指标：例如利用社交媒体文本分析、投资者情绪调查、恐慌指数（VIX）等构建情绪择时模型。</p></li>
+<li><p>术研究论文：金融学和计量经济学的前沿论文常常是新策略思想的宝库。</p></li>
+<li><p>个人交易经验的量化：将一个成功的交易员主观的、模糊的交易直觉，提炼成清晰、可量化的规则。</p></li>
+</ul>
+</section>
+<section id="第二阶段策略的量化建模与代码实现" class="level3">
+<h3 class="anchored" data-anchor-id="第二阶段策略的量化建模与代码实现">2.第二阶段：策略的量化建模与代码实现</h3>
+<p>这是将抽象思想转化为具体、可执行代码的过程。</p>
+<ul>
+<li><p><strong>精确定义：</strong>必须将所有模糊的描述（如“突破20日均线”）转化为精确的数学语言（如<span class="math inline">\(CLOSE[t]&gt;MA20[t]\)</span>）。</p></li>
+<li><p><strong>数据获取与清洗：</strong>获取可靠的历史数据，包括开盘价、收盘价、最高价、最低价、成交量等；处理数据中的缺失、异常值等问题，确保数据的准确无误。</p></li>
+<li><p><strong>编程实现：</strong>使用编程语言（如Python）和或相应的量化框架（如Backtrader）将交易逻辑、仓位管理和风控规则编写成计算机程序。 这个过程将策略逻辑固化下来，为下一步的检验做好了准备。</p></li>
+</ul>
+</section>
+<section id="第三阶段策略回测" class="level3">
+<h3 class="anchored" data-anchor-id="第三阶段策略回测">3.第三阶段：策略回测</h3>
+<p>回测是量化策略开发中的关键环节。它是在历史数据上模拟执行策略，以评估其过去的表现，从而推断其未来可能的效果。一个严谨的回测过程需要注意以下几点：</p>
+<ul>
+<li><p><strong>避免用到未来数据：</strong>确保在模拟的任何一个时间点<span class="math inline">\(t\)</span>，策略决策所使用的所有信息都是在<span class="math inline">\(t\)</span>时刻或之前就已经可以获得的。例如，不能用<span class="math inline">\(t\)</span>日的收盘价来决定<span class="math inline">\(t\)</span>日开盘时的买卖，因为收盘价是未来信息；应使用<span class="math inline">\(t-1\)</span>日的数据来判断<span class="math inline">\(t\)</span>日开盘时的信号。</p></li>
+<li><p><strong>数据长度与多样性：</strong>回测的时间跨度应足够长，并且要覆盖多种市场环境（牛市、熊市、震荡市），以检验策略的稳健性。</p></li>
+<li><p><strong>考虑交易成本：</strong>必须将实际成交中的手续费和滑点考虑在内。忽略交易成本会极大地美化回测结果，使得一个在模拟中看似盈利的策略在实盘中可能因为高昂的交易费用而亏损。</p></li>
+</ul>
+</section>
+<section id="第四阶段参数优化" class="level3">
+<h3 class="anchored" data-anchor-id="第四阶段参数优化">4.第四阶段：参数优化</h3>
+<p>对于MA20策略，一个很自然的问题是：为什么是20天？10天、30天或者55天会不会更好？参数优化就是通过系统性地遍历参数组合，并进行回测，以找到在历史数据上表现最优的参数集。例如，遍历均线周期从5天到100天。</p>
+<p>然而，参数优化是一把双刃剑。过度地在历史数据上寻找“最优”参数，极有可能导致过拟合。过拟合的策略，本质上是“记住”了历史数据的特定噪声和偶然规律，而不是发现了市场普适的、可持续的模式。这样的策略在回测中表现惊艳，但在未来的实盘交易中几乎注定会失败。</p>
+<p><strong>避免过拟合</strong>的方法包括：</p>
+<ul>
+<li><p><strong>参数稳定性检验：</strong>最优参数周围的参数组合，其表现也应相对较好。如果一个策略仅在某个“针尖上”的参数表现优异，而稍作改动表现就急剧下降，那么这个策略很可能是过拟合的。</p></li>
+<li><p><strong>经济学/金融学逻辑支撑：</strong>策略的参数选择最好有合理的经济学解释，而不仅仅是数据拟合的结果。例如，20日均线代表月度成本，60日代表季度成本，这些周期具有一定的市场共识。</p></li>
+<li><p><strong>保持策略简单性：</strong>策略的参数和规则越少，过拟合的风险通常越低。奥卡姆剃刀原理在此同样适用。</p></li>
+<li><p><strong>样本外测试：</strong>将数据分为两部分：样本内数据（In-Sample）用于优化参数，样本外数据（Out-of-Sample）用于测试优化后的策略。如果策略在样本外数据上表现依然良好，则其稳健性更高。滚动窗口回测本身就是一种连续的样本外测试。</p></li>
+</ul>
+<p>一个完整的量化策略开发流程，就是在“发现规律-验证规律-防止假规律”之间不断循环迭代的过程，充满了科学的严谨与审慎。</p>
+</section>
+</section>
+<section id="三策略性能评估指标" class="level2">
+<h2 class="anchored" data-anchor-id="三策略性能评估指标">三、策略性能评估指标</h2>
+<p>如何科学、全面地评价一个择时策略的好坏？我们需要一套标准化的性能指标体系，从收益、风险和风险调整后收益等多个维度进行评估。</p>
+<section id="收益类指标return-metrics" class="level3">
+<h3 class="anchored" data-anchor-id="收益类指标return-metrics">1.收益类指标（Return Metrics）</h3>
+<p>这类指标衡量策略的盈利能力。</p>
+<ul>
+<li><p>累积收益率（Cumulative Return）：策略在整个回测期间的总收益率。它展示了账户净值的最终增长情况。</p></li>
+<li><p>年化收益率（Annualized Return）：将策略在回测期内的总收益率，换算成平均每年的收益率。这是最直观的指标，便于不同策略之间进行横向比较。</p></li>
+<li><p>超额收益（ Excess Return，或 Alpha）：相对于市场基准，如沪深300指数，的超额收益能力。正的Alpha代表策略跑赢了市场。它是衡量策略主动管理能力的核心指标。</p></li>
+</ul>
+</section>
+<section id="风险类指标risk-metrics" class="level3">
+<h3 class="anchored" data-anchor-id="风险类指标risk-metrics">2.风险类指标（Risk Metrics）</h3>
+<p>这类指标衡量策略在获取收益过程中所承担的风险和不确定性。</p>
+<ul>
+<li><p>最大回撤（Maximum Drawdown, MDD）：它衡量的是在回测期内，账户净值从任意一个历史高点回落到之后的某个低点的最大跌幅。最大回撤反映了投资者可能面临的最坏的亏损情况，直接关系到投资者的心理承受能力和策略的生存能力。一个最大回撤过大的策略，在实盘中很可能因为投资者无法忍受浮亏而被提前终止。</p></li>
+<li><p>年化波动率（Annualized Volatility）：衡量策略收益率的波动程度。波动率越高，代表策略净值的稳定性越差，不确定性越大。</p></li>
+<li><p>风险价值（ValueatRisk, VaR）：在一定的置信水平（如95%）和持有期内，策略可能面临的最大损失额。例如，95%置信水平下的单日VaR为2%，意味着在未来的交易日中，有95%的概率亏损不会超过2%。</p></li>
+</ul>
+</section>
+<section id="风险调整后收益指标risk-adjusted-return-metrics" class="level3">
+<h3 class="anchored" data-anchor-id="风险调整后收益指标risk-adjusted-return-metrics">3.风险调整后收益指标（Risk-Adjusted Return Metrics）</h3>
+<p>这类指标综合了收益和风险，衡量的是“每承担一单位风险，能够换来多少超额收益”。</p>
+<ul>
+<li><p>夏普比率（Sharpe Ratio）：最经典的风险调整后收益指标。计算公式为：（策略年化收益率-无风险利率）/策略年化波动率。夏普比率越高，说明策略在承担相同风险的情况下，获取超额收益的能力越强。</p></li>
+<li><p>卡玛比率（Calmar Ratio）：计算公式为：年化收益率/最大回撤。这个指标非常直观，直接衡量了收益与最大痛苦（回撤）之间的关系。卡玛比率越高，说明策略的收益回撤比越优秀，投资体验越好。</p></li>
+</ul>
+</section>
+<section id="交易行为指标" class="level3">
+<h3 class="anchored" data-anchor-id="交易行为指标">4.交易行为指标</h3>
+<ul>
+<li><p>胜率（Win Rate）：盈利的交易次数占总交易次数的比例。对于趋势跟踪策略，胜率通常不高，可能低于50%。因为它们在震荡市中会产生大量小额亏损的交易。</p></li>
+<li><p>盈亏比（Profit/Loss Ratio）：平均每笔盈利交易的金额/平均每笔亏损交易的金额。成功的趋势跟踪策略，其核心正是依靠低胜率和极高的盈亏比来取胜的：用多次小额亏损，来换取少数几次的大幅盈利。</p></li>
+</ul>
+<p>综述，一个好的量化择时策略，不仅要有可观的年化收益，还应具备较小的最大回撤、较高的夏普比率和卡玛比率，以及与其策略逻辑相匹配的胜率和盈亏比。</p>
+</section>
+</section>
+<section id="四总结与展望" class="level2">
+<h2 class="anchored" data-anchor-id="四总结与展望">四、总结与展望</h2>
+<p>综上所述，可见20日均线策略是择时策略绝佳的案例。它以最简单直观的方式，向我们展示了量化择时策略的框架和核心要素：顺势而为的哲学、明确的交易规则、客观的执行纪律以及在特定市场环境下的局限性。它是一个理解趋势跟踪、回测评估和风险控制的完美起点。</p>
+<p>但在现代的金融市场，单一静态的趋势策略，由于其滞后性、和对震荡市的脆弱性，很难作为投资者的稳定收益来源。回顾前文中介绍的股票多因子模型，成功的量化择时策略同样是一项系统工程和模型体系。这个量化择时体系能在市场中长期生存并取得成功，绝非依赖于单一模型和策略，而应该是一个多指标、多策略、多周期、多因子的复杂系统。</p>
+<p>此外，随着量化投资理论和技术的不断进步，量化择时也正朝着更加智能化和多元化的方向发展。机器学习和人工智能技术正在被越来越多地用于识别非线性的市场模式，替代传统的技术指标。另类数据（如卫星图像、社交媒体文本、供应链数据）的引入，为择时模型提供了全新的信息维度。</p>
+<p>从本章开始，我们将从20日均线这一起点出发，踏上了一条通往量化投资择时策略世界的探索之路。书中内容有限，但探索之路没有终点。希望本章内容能帮助读者开启灵感的大门，不断地提出假设、尝试和探索，在市场的不断反馈中持续学习和进化。这也正是量化投资的挑战所在，魅力所在。</p>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./第2章 因子选股 第12节 逆向“排雷”.html" class="pagination-link" aria-label="第2章 因子选股 第12节 逆向“排雷”">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">第2章 因子选股 第12节 逆向“排雷”</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./第3章 择时 第2节 技术指标和技术分析.html" class="pagination-link" aria-label="第3章 择时 第2节 技术指标和技术分析">
+        <span class="nav-page-text">第3章 择时 第2节 技术指标和技术分析</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
